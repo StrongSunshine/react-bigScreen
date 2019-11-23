@@ -4,21 +4,36 @@
   "description": "a single bigscreen",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server ./config/webpack.dev.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.conf.js",
     "start": "cross-env NODE_ENV=develop node ./config/dev-server.js",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.conf.js",
-    "report": "cross-env NODE_ENV=production npm_config_report=true npm run build"
+    "report": "cross-env NODE_ENV=production npm_config_report=true npm run build",
+    "server": "webpack-dev-server --config ./config/webpack.base.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-decorators": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.3.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
     "react": "^16.12.0",
