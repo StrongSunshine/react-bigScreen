@@ -1,4 +1,4 @@
-import { SET_SOCKET } from './type'
+import { SET_SOCKET } from '../type'
 
 const defaultState = {
   socket: null

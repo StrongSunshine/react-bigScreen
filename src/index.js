@@ -1,19 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
 import Route from './router'
+import configStore from './store'
 
 import 'assets/css/global.scss'
 
-function render(Components) {
+const store = configStore()
+
+function render(Component) {
   ReactDOM.render(
     <AppContainer>
-      <Provider >
+      <Provider store={store}>
         <BrowserRouter>
-          <Components />
+          <Component />
         </BrowserRouter>
       </Provider>
     </AppContainer>,
@@ -24,5 +27,7 @@ function render(Components) {
 render(Route)
 
 if (module.hot) {
-  module.hot.accept('./router/index.js', () => render(Route))
+  module.hot.accept('./router', () => {
+    render(Route)
+  })
 }

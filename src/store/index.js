@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 
-import rootReducer from ''
+import rootReducer from './reducers'
 
 const composeEnhancers = 
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -14,5 +14,5 @@ const enhancer = composeEnhancers(
 )
 
 export default function configStore() {
-  return createStore()
+  return createStore(rootReducer, enhancer)
 }

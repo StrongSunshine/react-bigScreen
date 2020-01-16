@@ -8,7 +8,6 @@ export default class Home extends PureComponent {
     return (
       <ReactParticleLine>
         <div className={style.homebox}>
-          zxczxczxczxc
         </div>
       </ReactParticleLine>
     )
