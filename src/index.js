@@ -1,9 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+
+import Route from './router'
 
 import 'assets/css/global.scss'
 
-ReactDOM.render(
-  <h1>这是一个大屏项目</h1>,
-  document.getElementById('app')
-)
+function render(Components) {
+  ReactDOM.render(
+    <AppContainer>
+      <Provider >
+        <BrowserRouter>
+          <Components />
+        </BrowserRouter>
+      </Provider>
+    </AppContainer>,
+    document.getElementById('app')
+  )
+}
+
+render(Route)
+
+if (module.hot) {
+  module.hot.accept('./router/index.js', () => render(Route))
+}

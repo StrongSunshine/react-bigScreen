@@ -1,0 +1,48 @@
+.homeBox {
+  position: relative;
+  width: 100%;
+  min-width: 1920px;
+  height: 100%;
+  min-height: 1080px;
+  font-size: 14px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 80px repeat(8, 1fr);
+  grid-gap: 6px;
+  padding: 6px;
+  z-index: 99;
+  .topLeft,
+  .topCenter,
+  .topRight,
+  .bottomLeft,
+  .bottomCenter,
+  .bottomRight {
+    position: relative;
+    // overflow: hidden;
+    background: rgba(40, 47, 56, 0.5);
+  }
+  .header {
+    grid-area: 1 / 1 / span 1 / span 9;
+  }
+  .topLeft {
+    grid-area: 2 / 1 / span 4 / span 2;
+    // display: flex;
+  }
+  .topCenter {
+    grid-area: 2 / 3 / span 5 / span 4;
+    display: flex;
+  }
+  .topRight {
+    grid-area: 2 / 7 / span 5 / span 3;
+  }
+  .bottomLeft {
+    grid-area: 6 / 1 / span 4 / span 2;
+  }
+  .bottomCenter {
+    grid-area: 7 / 3 / span 3 / span 4;
+  }
+  .bottomRight {
+    grid-area: 7 / 7 / span 3 / span 3;
+  }
+}

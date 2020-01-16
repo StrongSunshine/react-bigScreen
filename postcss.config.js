@@ -1,6 +1,5 @@
 module.exports = {
-  loader: 'postcss-loader',  
   plugins: {
-      'postcss-preset-env': {},
-    }
+    'postcss-preset-env': {}
+  }
 }
