@@ -22,7 +22,7 @@ SvgIcon.createFromIconfontCN = url => {
     script.setAttribute('src', url)
     script.setAttribute('data-namespace', url)
     customCache.add(url)
-    document.body.appendChild(url)
+    document.body.appendChild(script)
   }
 }
 
