@@ -27,7 +27,7 @@ const Header = memo(() => {
         实时数据看板
       </div>
       <div className={styles.desc}>
-        <SvgIcon icon='icon-shenzhi' className={styles.setIcon} />
+        <SvgIcon icon='icon-shezhi' className={styles.setIcon} />
         统计维度：昨天
       </div>
     </div>
