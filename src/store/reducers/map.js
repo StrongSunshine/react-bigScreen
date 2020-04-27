@@ -1,17 +1,18 @@
-import { SET_SOCKET } from '../types'
+import { SAVE_MAP } from '../types';
 
 const defaultState = {
-  socket: null
-}
+  mapData: [],
+  message: {},
+};
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case SET_SOCKET:
+    case SAVE_MAP:
       return {
         ...state,
-        ...action.payload
-      }
+        ...action.payload,
+      };
     default:
-      return state
+      return state;
   }
-}
+};

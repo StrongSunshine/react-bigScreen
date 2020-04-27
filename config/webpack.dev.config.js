@@ -12,7 +12,7 @@ module.exports = merge(commenConfig, {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client?noInfo=true&reload=true',
-    resolve('./src')
+    resolve('./src/index.js')
   ],
   output: {
     path: resolve('./dist'),

@@ -1,7 +1,12 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import app from './app'
+import app from './app';
+import map from './map';
+import loan from './loan';
 
 export default combineReducers({
-  app
-})
+  app,
+  map,
+  loan,
+});
+

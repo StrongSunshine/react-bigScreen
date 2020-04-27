@@ -19,11 +19,11 @@ const devMiddleware = webpackDevMiddleware(complier, {
 
 const hotMiddleware = webpackHotMiddleware(complier, {
   log: false,
-  heartbeat: 200
+  heartbeat: 500
 })
 
 app.use(devMiddleware)
 app.use(hotMiddleware)
 app.use(express.static(path.resolve(__dirname, '../dist')))
 
-server.listen(8685, () => console.log('server is running at 8685'))
+server.listen(3000, () => console.log('server is running at 3000'))
